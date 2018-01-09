@@ -3,11 +3,11 @@ module.exports = function () {
 
   return {
     quick: quick,
-    // merge: merge,
+    merge: merge,
   }
 };
 
-//quick sort
+// Quick Sort
 function quick(arr) {
   if (arr.length < 1) {
     return arr;
@@ -33,9 +33,30 @@ function quick(arr) {
 // console.log('greater ' + greater);
 
 // let final = lesser.concat(pivot, greater);
-// console.log('final array ' + final);
+// console.log('final array ' + final); 
 
 console.log(quick(lesser).concat(pivot, quick(greater)));
 return quick(lesser).concat(pivot, quick(greater));
+
+}
+
+// Merge Sort
+
+function merge (arr) {
+  if (arr.length < 1) {
+    return arr;
+  }
+
+  let center = Math.floor(arr.length / 2);
+  let left = arr.slice(0, center);
+  let right = arr.slice(center);
+
+  console.log(center + ' center');
+  console.log(left + ' left');
+  console.log(right + ' rightytighty');
+
+  // while (left.length && right.length) {
+  //   if (left < right)
+  // }
 
 }
